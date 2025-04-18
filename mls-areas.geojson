@@ -1,0 +1,207 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C06",
+        "mls_area_name": "Brentwood"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4987, 34.0797],
+            [-118.4680, 34.0852],
+            [-118.4686, 34.0611],
+            [-118.4985, 34.0603],
+            [-118.4987, 34.0797]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C14",
+        "mls_area_name": "Santa Monica"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.5190, 34.0300],
+            [-118.4590, 34.0300],
+            [-118.4590, 34.0500],
+            [-118.5190, 34.0500],
+            [-118.5190, 34.0300]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C11",
+        "mls_area_name": "Venice"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4750, 33.9900],
+            [-118.4400, 33.9900],
+            [-118.4400, 34.0100],
+            [-118.4750, 34.0100],
+            [-118.4750, 33.9900]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C13",
+        "mls_area_name": "Mar Vista"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4600, 34.0100],
+            [-118.4300, 34.0100],
+            [-118.4300, 34.0400],
+            [-118.4600, 34.0400],
+            [-118.4600, 34.0100]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C30",
+        "mls_area_name": "Palms"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4200, 34.0300],
+            [-118.3900, 34.0300],
+            [-118.3900, 34.0500],
+            [-118.4200, 34.0500],
+            [-118.4200, 34.0300]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C28",
+        "mls_area_name": "Culver City"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4000, 34.0100],
+            [-118.3700, 34.0100],
+            [-118.3700, 34.0300],
+            [-118.4000, 34.0300],
+            [-118.4000, 34.0100]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C12",
+        "mls_area_name": "Marina Del Rey"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4600, 33.9800],
+            [-118.4300, 33.9800],
+            [-118.4300, 34.0000],
+            [-118.4600, 34.0000],
+            [-118.4600, 33.9800]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C05",
+        "mls_area_name": "Westwood / Century City"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4700, 34.0500],
+            [-118.4400, 34.0500],
+            [-118.4400, 34.0700],
+            [-118.4700, 34.0700],
+            [-118.4700, 34.0500]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "mls_area_id": "C19",
+        "mls_area_name": "West Los Angeles"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-118.4500, 34.0400],
+            [-118.4200, 34.0400],
+            [-118.4200, 34.0600],
+            [-118.4500, 34.0600],
+            [-118.4500, 34.0400]
+          ]
+        ]
+      }
+    }
+  ]
+}
+
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ResiRank MLS Area Picker</title>
+
+  <!-- Mapbox GL JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.16.1/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.16.1/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="sidebar">
+    <h2>Selected Areas</h2>
+    <ul id="selected-list"></ul>
+    <button id="reset">Reset All</button>
+    <button id="submit">Submit</button>
+  </div>
+
+  <!-- Load script AFTER everything else -->
+  <script src="script.js" defer></script>
+</body>
+</html>
